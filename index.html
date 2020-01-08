@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Где церковь?</title>
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <link rel="shortcut icon" href="/img/favicon.png" type="image/png">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="spinner" id="spinner">
+              <div class="lds-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div class="actions">
+                <a class="button" onclick="getCurrentPosition()">Найти ближайшие церкви</a>
+                <div class="icons">
+                    <div>
+                        <image src="http://maps.google.com/mapfiles/ms/icons/red-dot.png">
+                        - церкви ХВЕ
+                    </div>
+                    <div>
+                        <image src="http://maps.google.com/mapfiles/ms/icons/blue-dot.png">
+                        - церкви ЕХБ
+                    </div>
+                    <div>
+                        <image src="http://maps.google.com/mapfiles/ms/icons/pink-dot.png">
+                        - церкви ХПЕ
+                    </div>
+                    <div>
+                        <image src="http://maps.google.com/mapfiles/ms/icons/green-dot.png">
+                        - Ваше местоположение
+                    </div>
+                </div>
+            </div>
+            <div id="map"></div>
+            <div id="list">
+              <h2>Ближайщие церкви находятся:</h2>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVlCifAGKAGsYtpx87VK6XqOOc05UHE3Y&callback=initMap"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false&libraries=geometry"></script>
+
+</html>
